@@ -23,7 +23,7 @@ Your lab directory must include
 * **.eslintignore** -- with the class .eslintignore
 * **.babelrc** -- with all dependencies and dev-dependencies
 * **package.json** -- with all dependencies and dev-dependencies
-* **yarn.lock** -- with the yarn lockfile
+* **package.lock.json** -- with the npm lockfile
 * **webpack.config.js** -- with webpack config
 * **src/** -- containing the frontend code
 * **src/main.js** -- containing the entire app

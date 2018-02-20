@@ -2,7 +2,24 @@
 ===
 
 ## Requirements
-Use a Hash Table to remove duplicates from an array
+<!-- Use a Hash Table to remove duplicates from an array -->
+Given a 2-dimensional array of numbers, rotate the array 90 degrees.
+
+```js
+[
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+]
+
+// rotated 90 degrees
+[
+  [7, 4, 1],
+  [8, 5, 2],
+  [9, 6, 3],
+]
+
+```
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality
