@@ -37,7 +37,7 @@ class SearchForm extends React.Component {
   render() {
     return (
       <form
-        className="search-form"
+        className={this.props.error ? 'form-error' : 'search-form'}
         onSubmit={this.handleSubmit}>
 
         <input
@@ -71,13 +71,11 @@ class Results extends React.Component {
       <div className="results">
         {this.props.results ?
           <section className="results-data">
-            {console.log(this.props.results)}
-            <h2>{/* this.props.results */}results</h2>
+            <h2>Results for {this.props.results.data.children[0].data.subreddit}</h2>
             <ul>
               {this.props.results.data.children.map((a, b) => {
                 return <li key={b}>
-                  <a href={a.data.url}><h2>{a.data.title}</h2></a>
-                  <p>Ups: {a.data.ups}</p>
+                  <a href={a.data.url}><h2>{a.data.title}</h2><p>Ups: {a.data.ups}</p></a>
                 </li>;
               })
               }
@@ -88,6 +86,7 @@ class Results extends React.Component {
         }
 
         {this.props.error ?
+
           <section className="results-error">
             <h2>You broke it.</h2>
           </section>
@@ -123,6 +122,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="application">
+        <h1>Search Reddit for Topics</h1>
+        <h3>Enter the topic and limit results in the boxes below</h3>
         <SearchForm update_state={this.updateState}/>
         <Results results={this.state.results} error={this.state.searchError}/>
       </div>
