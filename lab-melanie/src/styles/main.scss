@@ -1,35 +1,80 @@
-// header {
-//     height: 100px;
-//     text-align: center;
-//     background-color: aqua;
-// }
+$font-stack: Helvetica, sans-serif;
+$primary-color: #FFFFFF;;
+$secondary-color: #4C7A59;
+$error-color: #E21A34;
+$form-color:  rgb(244, 244, 245);
 
-// header h1 {
-//   padding-top: 30px;
-// }
+* {
+  font-family: $font-stack;
+  background-color: $primary-color;
+  text-align: center;
+}
 
-// h1, h2 {
-//   text-align: center;
-//   font-family: helvetica;
-// }
+h1, h2, h3 {
+  color: $secondary-color;
+}
 
-// select {
-//   height: 40px;
-//   width: 50%;
-//   font-size: 25px;
-//   margin-left: 25%;
-//   margin-bottom: 20px;
-//   padding-left: 20%;
-// }
+h1 {
+  font-size: 40px;
+}
 
-// button {
-//   height: 40px;
-//   width: 50%;
-//   font-size: 25px;
-//   margin-left: 25%;
-// }
+h2 {
+  font-size: 30px;
+}
 
-// pre {
-//   margin-left: 20%;
-//   font-size: 25px;
-// }
+input, button {
+  width: 25%;
+  height: 30px;
+  font-size: 20px;
+  color: #777;
+  background-color: $form-color;
+}
+
+fieldset {
+  border: none;
+}
+
+
+li {
+  list-style: none;
+  margin: 10px;
+  border-radius: 25px;
+  border: 2px solid $secondary-color;
+  transition: 150ms;
+
+  &:hover {
+    background-color: rgb(236, 236, 236);
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+a h3 {
+  background-color: inherit;
+  font-size: 20px;
+  color: palevioletred;
+}
+
+p {
+  font-size: 20px;
+  color: palevioletred;
+  padding-bottom: 10px;
+  background-color: inherit;
+}
+
+.form-error input {
+  width: 25%;
+  height: 30px;
+  font-size: 20px;
+  color: #777;
+  background-color: $form-color;
+  border-color: $error-color;
+}
+
+.results-error h2 {
+  color: $error-color;
+}

@@ -1,5 +1,6 @@
 'use strict';
 
+// import './styles/reset.scss';
 import './styles/main.scss';
 
 import React from 'react';
@@ -54,8 +55,9 @@ class SearchForm extends React.Component {
           value={this.state.limit}
           onChange={this.handleLimitChange}
           placeholder="Limit To"/>
-
-        <button type="submit">Search</button>
+        <fieldset>
+          <button type="submit">Search</button>
+        </fieldset>
       </form>
     );
   }
@@ -75,7 +77,7 @@ class Results extends React.Component {
             <ul>
               {this.props.results.data.children.map((a, b) => {
                 return <li key={b}>
-                  <a href={a.data.url}><h2>{a.data.title}</h2><p>Ups: {a.data.ups}</p></a>
+                  <a href={a.data.url}><h3>{a.data.title}</h3><p>Ups: {a.data.ups}</p></a>
                 </li>;
               })
               }
@@ -124,7 +126,7 @@ class App extends React.Component {
       <div className="application">
         <h1>Search Reddit for Topics</h1>
         <h3>Enter the topic and limit results in the boxes below</h3>
-        <SearchForm update_state={this.updateState}/>
+        <SearchForm update_state={this.updateState} error={this.state.searchError}/>
         <Results results={this.state.results} error={this.state.searchError}/>
       </div>
     );
