@@ -1,5 +1,17 @@
 # Forms and Props
 
+This is an application that allows a user to enter in a topic and limit search results in a form and returns a list of results as links.
+
+Home Screen:
+![home](./img/search-pic.png)
+
+Search Results:
+![results](./img/result-pic.png)
+
+If an entry is invalid, the input border changes to red and an error message is displayed.
+
+Error Screen:
+![error](./img/error-pic.png)
 
 
 ---
