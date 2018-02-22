@@ -1,6 +1,5 @@
 'use strict';
 
-// import './styles/reset.scss';
 import './styles/main.scss';
 
 import React from 'react';
